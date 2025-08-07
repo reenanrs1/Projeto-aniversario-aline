@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Aline! 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Corações flutuantes de fundo -->
+    <div class="hearts-background">
+        <div class="heart heart1">💖</div>
+        <div class="heart heart2">💕</div>
+        <div class="heart heart3">💝</div>
+        <div class="heart heart4">💗</div>
+        <div class="heart heart5">💓</div>
+        <div class="heart heart6">💖</div>
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1 class="main-title">Feliz Aniversário</h1>
+            <h2 class="name-title">Minha gatona! 🎉</h2>
+            <p class="date">Hoje é seu Dia Especial</p>
+        </header>
+
+        <!-- Seção de fotos -->
+        <section class="photo-gallery">
+            <h3>Nossos Momentos Especiais 📸</h3>
+            <div class="photos-grid">
+                <div class="photo-card" onclick="showMessage(1)">
+                    <img src="fotos/foto1.jpg" alt="Nossa foto 1" onerror="this.src='https://via.placeholder.com/300x200/ff69b4/ffffff?text=Foto+1'">
+                    <div class="photo-overlay">
+                        <span>Clique aqui! 💕</span>
+                    </div>
+                </div>
+                <div class="photo-card" onclick="showMessage(2)">
+                    <img src="fotos/foto2.jpg" alt="Nossa foto 2" onerror="this.src='https://via.placeholder.com/300x200/ff1493/ffffff?text=Foto+2'">
+                    <div class="photo-overlay">
+                        <span>Clique aqui! 💕</span>
+                    </div>
+                </div>
+                <div class="photo-card" onclick="showMessage(3)">
+                    <img src="fotos/foto3.jpg" alt="Nossa foto 3" onerror="this.src='https://via.placeholder.com/300x200/ff69b4/ffffff?text=Foto+3'">
+                    <div class="photo-overlay">
+                        <span>Clique aqui! 💕</span>
+                    </div>
+                </div>
+                <div class="photo-card" onclick="showMessage(4)">
+                    <img src="fotos/foto4.jpg" alt="Nossa foto 4" onerror="this.src='https://via.placeholder.com/300x200/ff1493/ffffff?text=Foto+4'">
+                    <div class="photo-overlay">
+                        <span>Clique aqui! 💕</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão especial -->
+        <section class="special-button">
+            <button class="birthday-btn" onclick="createHeartExplosion()">
+                🎂 Surpresa Especial! 🎂
+            </button>
+        </section>
+
+        <!-- Seção de mensagens -->
+        <section class="messages-section">
+            <h3>Mensagens do Coração 💌</h3>
+            <div class="message-cards">
+                <div class="message-card" onclick="revealMessage(this)">
+                    <div class="message-front">💕 Clique para ler</div>
+                    <div class="message-back">Você é a pessoa mais especial da minha vida!</div>
+                </div>
+                <div class="message-card" onclick="revealMessage(this)">
+                    <div class="message-front">💖 Clique para ler</div>
+                    <div class="message-back">Cada dia ao seu lado é um presente!</div>
+                </div>
+                <div class="message-card" onclick="revealMessage(this)">
+                    <div class="message-front">💝 Clique para ler</div>
+                    <div class="message-back">Que este novo ano seja repleto de alegrias!</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>Com todo meu amor ❤️</p>
+            <p class="small-text">Feito especialmente para você 💕</p>
+        </footer>
+    </div>
+
+    <!-- Modal para mensagens das fotos -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalMessage"></div>
+        </div>
+    </div>
+
+    <!-- Container para corações clicáveis -->
+    <div id="clickHearts"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
